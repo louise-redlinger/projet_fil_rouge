@@ -1,6 +1,7 @@
 from grille import Grille
 from joueur import Joueur
 from chrono import Chrono
+import numpy as np
 
 class Demineur:
     
@@ -24,7 +25,17 @@ class Demineur:
         return #true si on a trouvé toutes les mines
     
     def afficher_grille(self):
-        return #afficher l'état actuel de la grille
+        for ligne in self.grille.cases:
+            ligne_affichee = []
+            for case in ligne:
+                if case.est_revelee:
+                    if case.est_minee:
+                        ligne_affichee.append("*")
+                    else:
+                        ligne_affichee.append(str(case.nombre_de_mines_voisines))
+                elif 
+                        
+                    
         
     def reveler_case(self, x, y):
         self.grille.reveler_case(x, y)

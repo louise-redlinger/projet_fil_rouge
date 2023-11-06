@@ -1,5 +1,5 @@
 from case import Case
-
+import random
 
 class Grille:
     
@@ -9,10 +9,22 @@ class Grille:
         self.nb_mines = nb_mines
 
     def generer_grille(self):
-        return #générer la grille avec les cases et placer les mines aléatoirement
+        #Initialisation de la grille
+        for ligne in self.cases:
+            for case in ligne:
+                case.est_minee = False
+        
+        #Placer les mines aléatoirement
+        mines_places = 0
+        while mines_places < self.nb_mines:
+            x = random.randint(0,self.taille[0]-1)
+            y = random.randint(0,self.taille[1]-1)
+            case = self.cases[x][y]
+            
+            if not case.est_minee:
+                case.est_minee = True
+                mines_places+=1
     
-    def placer_mines(self):
-        return #placer les mines dans la grille
     
     def reveler_case(self):
         return #logique pour révéler une case

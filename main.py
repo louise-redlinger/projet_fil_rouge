@@ -35,5 +35,26 @@ if __name__ == "__main__":
                     y=int(input("Quelle colonne ?"))
                     jeu.reveler_case(x, y)
                     
+                elif action == "D":
+                    x=int(input("Quelle ligne ?"))
+                    y=int(input("Quelle colonne ?"))
+                    jeu.joueur.marquer_case(x, y)
+                
+            if jeu.verifier_victoire():
+                print("Félicitations, vous avez trouvé toutes les bombes ! Temps total:",jeu.chrono.obtenir_temps_ecoule()," secondes")
+            
+            else:
+                print('*BOOOM!!!* Vous avez perdu.')
+            
+            jeu.terminer_partie()
+        
+        if choix == "2":
+            print("Très bon choix puisque c'est le tien! A bientôt!")
+            
+        else: 
+            print("Choix invalide. Essaye encore!")
+        
+
+                    
         
 
