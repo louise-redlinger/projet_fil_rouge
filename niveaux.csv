@@ -1,0 +1,5 @@
+niv;nom;nb_ligne;nb_colonne;nb_mines
+1;Timide;5;5;3
+2;Curieux;9;9;10
+3;Aventureux;16;16;40
+4;Téméraire;15;30;99
