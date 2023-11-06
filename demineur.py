@@ -20,6 +20,9 @@ class Demineur:
         temps_ecoule = self.chrono.obtenir_temps_ecoule()
         #affichage de fin de partie
         
+    def verifier_victoire(self):
+        return #true si on a trouvé toutes les mines
+    
     def afficher_grille(self):
         return #afficher l'état actuel de la grille
         

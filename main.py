@@ -21,7 +21,19 @@ if __name__ == "__main__":
             
             while not jeu.verifier_victoire():
                 
+                #Afficher la grille
+                jeu.afficher_grille()
                 
-            
+                #Demander quelle est la prochaine action
+                action = input("Votre prochaine action (D pour marquer d'un drapeau, R pour révéler une case et Q pour Rage Quit)?")
+                
+                if action == "Q":
+                    break
+                
+                elif action == "R":
+                    x=int(input("Quelle ligne ?"))
+                    y=int(input("Quelle colonne ?"))
+                    jeu.reveler_case(x, y)
+                    
         
 
