@@ -25,6 +25,7 @@ class Demineur:
         return #true si on a trouvé toutes les mines
     
     def afficher_grille(self):
+        
         for ligne in self.grille.cases:
             ligne_affichee = []
             for case in ligne:
@@ -33,7 +34,6 @@ class Demineur:
                         ligne_affichee.append("*")
                     else:
                         ligne_affichee.append(str(case.nombre_de_mines_voisines))
-                elif 
                         
                     
         
