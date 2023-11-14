@@ -32,8 +32,6 @@ class Fenetre(QWidget):
         self.setLayout(layout)
         
 
-        
-        
     def appui_bouton(self):
         print("Découvrir")
         
