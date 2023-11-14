@@ -1,10 +1,13 @@
 import sys
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
+from pyDemineur.core.grille import Grille
 
 
 class Fenetre(QWidget):
-    def __init__(self):
+    
+    def __init__(self, nb_mines_initial, taille_grille):
+        
         QWidget.__init__(self)
         self.setWindowTitle("Démineur")
         
@@ -54,3 +57,25 @@ fen.show()
 
 # exécution de l'application
 app.exec_()
+
+if __name__ == "__main__":
+    
+    print("Lancement du démineur")
+    
+    print("Difficultée souhaitée ? 0 facile, 1 moyen, 2 difficle")
+    
+    try:
+        difficulté = int(input())
+        if difficulté == 0:
+            partie = Partie(10, [8, 8])
+        elif difficulté == 1:
+            partie = Partie(40, [14, 14])
+        elif difficulté == 2:
+            partie = Partie(99, [20, 20])
+        else:
+            print("difficulté inconnue, facile par défaut")
+            partie = Partie(10, [8, 8])
+    except:
+        print("difficulté inconnue, facile par défaut")
+        partie = Partie(10, [8, 8])
+    
